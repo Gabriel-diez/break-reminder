@@ -14,13 +14,13 @@ func main() {
 	}
 }
 
-func pushNotification (n* gosxnotifier.Notification) {
+func pushNotification(n *gosxnotifier.Notification) {
 	if err := n.Push(); err != nil {
 		log.Fatal(err)
 	}
 }
 
-func buildNotification () gosxnotifier.Notification {
+func buildNotification() gosxnotifier.Notification {
 	n := gosxnotifier.NewNotification("It's break time ! Don't forget to drink and stretch")
 	n.Title = "Pause Reminder"
 	n.Sender = "com.apple.Stickies"
